@@ -1,0 +1,190 @@
+Time resolution is 1 ps
+XilinxAXIVIP: Found at Path: bec_tb.DUT.axi_becvip2_i.axi_vip_0.inst
+start
+Open key file successfully
+reading file
+reading file
+key: 6465996400017164470752875018317769231322148745942
+INFO: [Master VIP_monitor] (.axi_vip_pkg.\axi_monitor(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::run_phase .Block8312_3.) 235 ns : run()
+INFO: [Master VIP_wr_driver] (.axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::run_phase .Block9489_18.) 235 ns : run()
+INFO: [Master VIP_rd_driver] (.axi_vip_pkg.\axi_mst_rd_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::run_phase .Block10569_68.) 235 ns : run()
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 245 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 245 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000000 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                245 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0x00000001 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 315 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 325 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (0) A:0x00000000c0000000 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+Enable IP successfully
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 335 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 335 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000004 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                335 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0x13dbb2d6 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 405 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 415 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (4) A:0x00000000c0000004 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+write key
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 425 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 425 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000004 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                425 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0xe079f9d8 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 495 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 505 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (8) A:0x00000000c0000004 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+writing key
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 515 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 515 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000004 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                515 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0x5e2ac069 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 585 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 595 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (12) A:0x00000000c0000004 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+writing key
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 605 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 605 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000004 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                605 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0xa4c07ae1 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 675 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 685 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (16) A:0x00000000c0000004 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+writing key
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 695 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 695 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000004 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                695 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0x6c994e71 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 765 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 775 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (20) A:0x00000000c0000004 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+writing key
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 785 ns : Sending transaction: 
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::get_and_drive .GET_AND_DRIVE) 785 ns : ---------------------------------------------------------------------------------------------
+  Name                         Value
+---------------------------------------------------------------------------------------------
+  CMD                          XIL_AXI_WRITE
+  ADDR                         0x00000000c0000004 
+  WID                          0x00000000
+  LEN                          0x00
+  SIZE                         0x010
+  BURST                        0x01
+  CACHE                        0x0000
+  LOCK                         0x00
+  PROT                         0x000
+  REGION                       0x0000
+  QOS                          0x0000
+  BRESP                        XIL_AXI_RESP_OKAY
+  DRIVER_RETURN_ITEM           XIL_AXI_PAYLOAD_RETURN 
+  CREATION_TIME                785 ns
+  SUBMIT_TIME                  0 ns
+  PAYLOAD                      4
+    BEAT[          0]          0x00000004 (strb : 0b1111) :beat_delay:         0
+--------------------------------------------------------------------------------------------
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::w_channel .W_CHANNEL.Block9970_50.Block9970_51) 855 ns : WREADY+WLAST (         0) id=0x00000000
+INFO: [Master VIP_wr_driver] (axi_vip_pkg.\axi_mst_wr_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::service_done_q .SERVICE_DONE_Q) 865 ns : SERVICE_DONE_Q: XIL_AXI_WRITE (24) A:0x00000000c0000004 ID:0x00000000 len:0x00 XIL_AXI_SIZE_4BYTE XIL_AXI_BURST_TYPE_INCR C:0b0000 L:XIL_AXI_ALOCK_NOLOCK P:0b000
+done writing key
+INFO: [Master VIP_rd_driver] (axi_vip_pkg.\axi_mst_rd_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::ar_channel .AR_CHANNEL) 875 ns : ARVALID id=0x00000000
+INFO: [Master VIP_rd_driver] (axi_vip_pkg.\axi_mst_rd_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::ar_channel .AR_CHANNEL) 915 ns : ARVALID id=0x00000000
+INFO: [Master VIP_rd_driver] (axi_vip_pkg.\axi_mst_rd_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::ar_channel .AR_CHANNEL) 955 ns : ARVALID id=0x00000000
+INFO: [Master VIP_rd_driver] (axi_vip_pkg.\axi_mst_rd_driver(C_AXI_PROTOCOL=2,C_AXI_SUPPORTS_NARROW=0,C_AXI_HAS_BURST=0,C_AXI_HAS_LOCK=0,C_AXI_HAS_CACHE=0,C_AXI_HAS_REGION=0,C_AXI_HAS_QOS=0)::ar_channel .AR_CHANNEL) 995 ns : ARVALID id=0x00000000
+Executing Axi4 End Of Simulation checks

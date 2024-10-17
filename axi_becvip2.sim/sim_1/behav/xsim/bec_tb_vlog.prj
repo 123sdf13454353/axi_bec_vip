@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/ec67/hdl" --include "D:/vivado_setting/Vivado/2022.2/data/xilinx_vip/include" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ip/axi_becvip2_axi_vip_0_0/sim/axi_becvip2_axi_vip_0_0_pkg.sv" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ip/axi_becvip2_axi_vip_0_0/sim/axi_becvip2_axi_vip_0_0.sv" \
+"../../../../axi_becvip2.srcs/sim_1/new/bec_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

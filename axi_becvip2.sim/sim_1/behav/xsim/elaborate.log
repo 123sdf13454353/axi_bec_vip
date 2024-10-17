@@ -1,0 +1,9 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado_setting/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_13 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot bec_tb_behav xil_defaultlib.bec_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9180] module 'axi_vip_axi4pc' is instantiated multiple times from VHDL or from both Verilog and VHDL; elaboration result may be incorrect [/wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/xilinx_vip/hdl/axi_vip_axi4pc.sv:559]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

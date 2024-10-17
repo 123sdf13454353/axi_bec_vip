@@ -1,0 +1,12 @@
+vhdl xil_defaultlib  \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/src/acb_package.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/src/acb.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/hdl/bec_ip_2_v1_0_S_AXI.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/src/classic_squarer.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/src/interleaved_mult.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/src/sm_bec.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ipshared/c7d5/hdl/bec_ip_2_v1_0.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/ip/axi_becvip2_bec_ip_2_0_0/sim/axi_becvip2_bec_ip_2_0_0.vhd" \
+"../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2/sim/axi_becvip2.vhd" \
+
+nosort

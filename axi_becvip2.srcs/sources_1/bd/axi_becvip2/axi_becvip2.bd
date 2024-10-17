@@ -1,0 +1,130 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x64BFD55530D25CCC",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../axi_becvip2.gen/sources_1/bd/axi_becvip2",
+      "name": "axi_becvip2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axi_vip_0": "",
+      "bec_ip_2_0": ""
+    },
+    "ports": {
+      "aclk0": {
+        "direction": "I"
+      },
+      "aresetn": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "axi_becvip2_axi_vip_0_0",
+        "xci_path": "ip\\axi_becvip2_axi_vip_0_0\\axi_becvip2_axi_vip_0_0.xci",
+        "inst_hier_path": "axi_vip_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Master_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Master_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      },
+      "bec_ip_2_0": {
+        "vlnv": "xilinx.com:user:bec_ip_2:1.0",
+        "xci_name": "axi_becvip2_bec_ip_2_0_0",
+        "xci_path": "ip\\axi_becvip2_bec_ip_2_0_0\\axi_becvip2_bec_ip_2_0_0.xci",
+        "inst_hier_path": "bec_ip_2_0"
+      }
+    },
+    "interface_nets": {
+      "axi_vip_0_M_AXI": {
+        "interface_ports": [
+          "bec_ip_2_0/S_AXI",
+          "axi_vip_0/M_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "aclk0",
+          "axi_vip_0/aclk",
+          "bec_ip_2_0/s_axi_aclk"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "aresetn",
+          "axi_vip_0/aresetn",
+          "bec_ip_2_0/s_axi_aresetn"
+        ]
+      }
+    },
+    "addressing": {
+      "/axi_vip_0": {
+        "address_spaces": {
+          "Master_AXI": {
+            "segments": {
+              "SEG_bec_ip_2_0_S_AXI_reg": {
+                "address_block": "/bec_ip_2_0/S_AXI/S_AXI_reg",
+                "offset": "0xC0000000",
+                "range": "64K",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
