@@ -172,7 +172,7 @@ architecture arch_imp of bec_ip_2_v1_0_S_AXI is
 
 	
 	
-	type state is (IDLE, WRITE_KEY, WAIT_FOR_KEYS, SHIFT_KEY, COMPUTING, READ_RESULT);
+	type state is (IDLE, WRITE_KEY,WAIT_FOR_KEYS, SHIFT_KEY, COMPUTING, READ_RESULT);
     signal fsm_state : state;
 
 begin
@@ -489,8 +489,7 @@ begin
     
     rst_w           <= not S_AXI_ARESETN; 
 	en_IP 		    <= enable_reg(0);
-  write_key_reg(0)      <= wen_key;
-write_key_reg(31 downto 1) <= (others => '0');
+
 
 reg_busy(0)<= busy;
 reg_busy(31 downto 1)<=(others=> '0');
@@ -500,14 +499,13 @@ reg_busy(31 downto 1)<=(others=> '0');
 read_result_reg(0)    <= ren_res;
 read_result_reg(31 downto 1) <= (others => '0');
 
-shift_key_reg(0)      <= shift_k;
-shift_key_reg(31 downto 1) <= (others => '0');
+
     done_reg   	    <= "000000000000000000000000000000" & done_w & ren_res; 
     next_key_reg   	<= "0000000000000000000000000000000" & next_key_w;
     
     
     --input key 
-	counter_key: process(S_AXI_ACLK, S_AXI_ARESETN, en_IP)
+	counter_key: process(S_AXI_ACLK, S_AXI_ARESETN)
 	begin
 	if rising_edge (S_AXI_ACLK) then 
 	   if (S_AXI_ARESETN = '0') then 
@@ -527,7 +525,7 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	end process; 
 	
 	
-	load_key_tmp: process(S_AXI_ACLK, S_AXI_ARESETN, wen_key) 
+	load_key_tmp: process(S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	if rising_edge (S_AXI_ACLK) then 
 	   if (S_AXI_ARESETN = '0') then 
@@ -553,7 +551,7 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	end if;
 	end process;
 	
-	shift_key_tmp: process(S_AXI_ACLK, S_AXI_ARESETN, next_key_w)
+	shift_key_tmp: process(S_AXI_ACLK, S_AXI_ARESETN)
 	begin 
 	   if rising_edge(S_AXI_ACLK) then 
 	       if S_AXI_ARESETN = '0' then 
@@ -567,7 +565,7 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	end process; 
 	key_w       <= key_tmp_1(0);
 	
-	count_shift_key: process(S_AXI_ACLK, S_AXI_ARESETN, next_key_w) 
+	count_shift_key: process(S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	   if rising_edge(S_AXI_ACLK) then 
 	       if S_AXI_ARESETN = '0' then 
@@ -579,7 +577,7 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	end process;
 	
 	--output	
-	store_result_tmp: process (S_AXI_ACLK, S_AXI_ARESETN, done_w) 
+	store_result_tmp: process (S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	if rising_edge(S_AXI_ACLK) then 
         if (S_AXI_ARESETN = '0') then 
@@ -595,14 +593,15 @@ shift_key_reg(31 downto 1) <= (others => '0');
     end if;
 	end process;
 	
-	count_read_result1: process(S_AXI_ACLK, S_AXI_ARESETN, done_w) 
+	count_read_result1: process(S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	   if rising_edge(S_AXI_ACLK) then 
 	       if S_AXI_ARESETN = '0' then 
 	           count_result_1 <= (others => '0');
 	       elsif ren_res = '1' then 
-	           if count_result_1 = "111" then 
+	           if count_result_1 = "110" then 
 	               count_result_1 <= (others => '0'); 
+			
 	           elsif (axi_araddr = "01100") then 
 	               if (slv_reg_rden = '1') then
 	                   count_result_1 <= count_result_1 + 1; 
@@ -612,13 +611,13 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	   end if; 
 	end process;
 	
-    count_read_result2: process(S_AXI_ACLK, S_AXI_ARESETN, done_w) 
+    count_read_result2: process(S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	   if rising_edge(S_AXI_ACLK) then 
 	       if S_AXI_ARESETN = '0' then 
 	           count_result_2 <= (others => '0');
 	       elsif ren_res = '1' then 
-	           if count_result_2 = "111" then 
+	           if count_result_2 = "110" then 
 	               count_result_2 <= (others => '0'); 
 	           elsif (axi_araddr = "10000") then 
 	               if (slv_reg_rden = '1') then
@@ -629,7 +628,7 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	   end if; 
 	end process;
 	
-    read_result_tmp1: process(S_AXI_ACLK, S_AXI_ARESETN, ren_res) 
+    read_result_tmp1: process(S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	if rising_edge (S_AXI_ACLK) then 
 	   if (S_AXI_ARESETN = '0') then 
@@ -663,7 +662,7 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	end if;
 	end process;
 	
-	read_result_tmp2: process(S_AXI_ACLK, S_AXI_ARESETN, ren_res) 
+	read_result_tmp2: process(S_AXI_ACLK, S_AXI_ARESETN) 
 	begin 
 	if rising_edge (S_AXI_ACLK) then 
 	   if (S_AXI_ARESETN = '0') then 
@@ -697,9 +696,66 @@ shift_key_reg(31 downto 1) <= (others => '0');
 	end if;
 	end process;
 	
-	
-	--controller
-	--controller
+
+--Finite_state_machine: process(S_AXI_ACLK, S_AXI_ARESETN)
+--begin  
+   -- if (S_AXI_ARESETN = '0') then 
+        --fsm_state <= IDLE; 
+    --elsif rising_edge (S_AXI_ACLK) then 
+       -- case fsm_state is 
+           -- when IDLE => 
+               -- if en_IP = '1' then 
+                   -- fsm_state <= WRITE_KEY; 
+               -- else 
+                  --  fsm_state <= IDLE; 
+               -- end if;
+                
+            --when WRITE_KEY => 
+              --  if next_key_w = '1' then 
+                  --  fsm_state <= WAIT_FOR_KEYS; 
+              --  else 
+                   -- fsm_state <= WRITE_KEY;
+               -- end if;
+                
+         --   when WAIT_FOR_KEYS => 
+             --   if count_key_r = "110" then  -- Ki?m tra n?u ?ã truy?n ?? 6 keys (??m t? 0 ??n 5, "110" là giá tr? th? 6)
+              --      fsm_state <= SHIFT_KEY;
+              --  else
+                --    fsm_state <= WAIT_FOR_KEYS;
+               -- end if;
+                
+          --  when SHIFT_KEY => 
+             --   if next_key_w = '0' then 
+                  --  fsm_state <= COMPUTING;
+              --  else 
+                   -- fsm_state <= SHIFT_KEY; 
+               -- end if; 
+               
+         --   when COMPUTING =>  
+            --    if done_w = '1' then 
+              --      fsm_state <= READ_RESULT; 
+             --   elsif next_key_w = '1' then 
+              --      fsm_state <= SHIFT_KEY; 
+             --   else 
+               --     fsm_state <= COMPUTING; 
+             --   end if; 
+                
+           -- when READ_RESULT =>  
+              --  if en_IP = '0' then 
+                --    fsm_state <= IDLE;
+             --   else 
+                --    fsm_state <= READ_RESULT;  
+              --  end if; 
+               
+        --end case; 
+    --end if;
+--end process;
+
+-- ?i?u ch?nh ?i?u ki?n cho các tín hi?u ?i?u khi?n d?a trên FSM m?i
+--wen_key 	<= '1' when fsm_state = WRITE_KEY else '0'; 
+--ren_res 	<= '1' when fsm_state = READ_RESULT else '0'; 
+--shift_k     <= '1' when fsm_state = SHIFT_KEY else '0'; 
+--en_BEC 		<= '0' when fsm_state = IDLE or fsm_state = READ_RESULT else '1';
 Finite_state_machine: process(S_AXI_ACLK, S_AXI_ARESETN)
 begin  
     if (S_AXI_ARESETN = '0') then 
@@ -707,22 +763,17 @@ begin
     elsif rising_edge(S_AXI_ACLK) then 
         case fsm_state is 
             when IDLE => 
-                if en_IP = '1' then 
                     fsm_state <= WRITE_KEY; 
-                else 
-                    fsm_state <= IDLE; 
-                end if;
+                
                 
             when WRITE_KEY => 
-                if next_key_w = '1' then 
-                    if count_key_r = "110" then
-                        fsm_state <= SHIFT_KEY; 
-                    else 
-                        fsm_state <= WRITE_KEY;
-                    end if;
-                else 
-                    fsm_state <= WRITE_KEY;
-                end if;
+					if next_key_w = '1'and  en_IP ='1' then 
+							fsm_state <= SHIFT_KEY; 
+					else 
+							fsm_state <= WRITE_KEY;
+					end if; 
+	
+            
                 
             when SHIFT_KEY => 
                 if next_key_w = '0' then 
@@ -741,7 +792,8 @@ begin
                 end if; 
                 
             when READ_RESULT =>  
-                if en_IP = '0' then 
+                if count_result_2 = "110" then 
+
                     fsm_state <= IDLE;
                 else 
                     fsm_state <= READ_RESULT;  
@@ -758,10 +810,12 @@ wen_key 	<= '1' when fsm_state = WRITE_KEY else '0';
 ren_res 	<= '1' when fsm_state = READ_RESULT else '0'; 
 shift_k     <= '1' when fsm_state = SHIFT_KEY else '0'; 
 en_BEC 		<= '0' when fsm_state = IDLE or fsm_state = READ_RESULT else '1';
-busy        <= '1' when fsm_state = WRITE_KEY or fsm_state = SHIFT_KEY or fsm_state = COMPUTING else '0';
+busy        <= '1' when fsm_state = WRITE_KEY or fsm_state = SHIFT_KEY or fsm_state = COMPUTING or fsm_state= READ_RESULT else '0';
 
 
-
--- User logic ends
+	
+	
+	-- User logic ends
 
 end arch_imp;
+	
